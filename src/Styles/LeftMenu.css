@@ -1,0 +1,325 @@
+.leftMenu {
+  width: 280px;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px 15px;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+
+.leftMenu .logoContainer {
+  color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftMenu .logoContainer i {
+  font-size: 30px;
+}
+
+.leftMenu .logoContainer i:nth-of-type(2) {
+  font-size: 20px;
+}
+
+.leftMenu .logoContainer h2 {
+  font-size: 20px;
+}
+
+.searchBox {
+  width: 100%;
+  height: 45px;
+  /* background: rebeccapurple; */
+  position: relative;
+  margin-top: 20px;
+  color: #848484;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.searchBox input {
+  width: 100%;
+  height: 100%;
+  text-indent: 5px;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 45px;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchBox .searchIcon {
+  position: absolute;
+  color: #848484;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  background: #555;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.MenuContainer {
+  margin: 15px 0;
+}
+
+.MenuContainer .title {
+  color: #848484;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.MenuContainer ul {
+  width: 100%;
+  padding: 0;
+}
+
+.MenuContainer ul li {
+  list-style: none;
+  width: 100%;
+  padding: 5px 0px;
+  position: relative;
+}
+
+.MenuContainer ul li a {
+  text-decoration: none;
+  color: #848484;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.MenuContainer ul li a i {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.MenuContainer ul li::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 0px;
+  height: 100%;
+  background: #49e12e;
+  border-radius: 5px;
+  left: -15px;
+}
+
+.MenuContainer ul li:hover::before,
+.MenuContainer ul li.active::before {
+  width: 5px;
+  transition: 0.3s;
+}
+
+.MenuContainer ul li:hover a,
+.MenuContainer ul li.active a {
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.playListContainer {
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.playListContainer .nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #848484;
+  margin-bottom: 10px;
+}
+
+.playListContainer .nameContainer p {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.playListContainer .nameContainer i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.playListContainer .playListScroll {
+  height: 140px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.playListContainer .playListScroll .playList {
+  display: flex;
+  align-items: center;
+  color: #848484;
+  margin: 10px 0;
+}
+
+.playListContainer .playListScroll .playList:hover {
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.playListContainer .playListScroll .playList i {
+  font-size: 18px;
+}
+
+.playListContainer .playListScroll .playList .trash {
+  margin-left: auto;
+}
+
+.playListContainer .playListScroll .playList p {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline;
+}
+
+.trackList {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+.trackList .top {
+  display: flex;
+  align-items: center;
+}
+
+.trackList .top img {
+  width: 50px !important;
+}
+
+.trackList .top .trackName {
+  margin-left: 10px;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.trackList .top .trackName .trackSpan {
+  display: block;
+  font-size: 12px;
+  color: #848484;
+}
+
+.trackList .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: #848484;
+}
+
+.trackList .bottom i {
+  font-size: 18px;
+}
+
+.trackList .bottom i:hover {
+  color: #f1f1f1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.trackList .bottom input {
+  position: relative;
+  height: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  appearance: none;
+}
+
+/* Chrome & Safari */
+
+.trackList .bottom input::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #49e12e;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+.trackList .bottom input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  border: 2px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0px 0px 0px;
+  z-index: 3;
+  box-sizing: border-box;
+  transition: all 250ms linear;
+}
+
+/* firefox */
+
+.trackList .bottom input::-moz-progress-bar {
+  background: #49e12e;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+.trackList .bottom input::-moz-range-thumb {
+  background: #49e12e;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+
+@media screen and (max-width: 550px) {
+  .leftMenu {
+    width: 64px;
+    min-width: 64px;
+  }
+
+  .leftMenu .searchBox {
+    display: none;
+  }
+
+  .leftMenu .trackList {
+    display: none;
+  }
+
+  .leftMenu .playListContainer {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a span {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a i {
+    font-size: 26px;
+  }
+
+  .leftMenu .MenuContainer ul li {
+    margin: 20px 0;
+  }
+
+  .leftMenu .logoContainer h2 {
+    margin-left: 20px;
+  }
+}
